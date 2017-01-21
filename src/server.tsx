@@ -45,8 +45,8 @@ if (process.env.NODE_ENV !== 'production') {
 
   app.use(require('webpack-hot-middleware')(webpackCompiler));
 }
-
-app.use(favicon(path.join(__dirname, 'public/favicon.ico')));
+// TODO: copy favicon.ico to public, otherwise the build is broken
+// app.use(favicon(path.join(__dirname, 'public/favicon.ico')));
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
